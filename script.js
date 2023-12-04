@@ -28,7 +28,7 @@ function drawMenu(e){
 
 function drawContent(e){
     var d = document.getElementById("content-"+e);
-    contentMain.innerHTML = d.textContent;
+    contentMain.innerHTML = d.innerHTML;
 }
 
 function loadContent(e){
