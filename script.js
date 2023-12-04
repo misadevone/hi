@@ -4,7 +4,9 @@ console.log("js berfungshen");
 var menuList = ['intro', 'about', 'contact'];
 var menuMain = document.getElementById("main-menu");
 var contentMain = document.getElementById("main-content");
+var bodyMain = document.getElementById("mainSuper");
 var a = "";
+var beautyMode = 0;
 
 
 
@@ -30,6 +32,30 @@ function drawContent(e){
 }
 
 function loadContent(e){
-    
     drawContent(e);
+}
+
+function beautyToggle(e){
+    if(beautyMode == 0) {
+        e.parentElement.style.backgroundImage = "url('wall1.png')";
+        bodyMain.style.fontFamily = "Times New Roman";
+        beautyMode = 1;
+    } else {
+        
+        e.parentElement.style.backgroundImage = "url('')";
+        bodyMain.style.fontFamily = "Arial, Helvetica, sans-serif";
+        beautyMode = 0;
+    }
+}
+
+function fontSize(e) {
+    console.log(bodyMain.style.fontSize);
+    if(e == 1) {
+        bodyMain.style.fontSize = "22px";
+
+    }
+    if(e == -1) {
+        bodyMain.style.fontSize = "8px";
+
+    }
 }
