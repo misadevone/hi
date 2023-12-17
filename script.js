@@ -1,7 +1,7 @@
 
 console.log("js berfungshen");
 
-var menuList = ['intro', 'about', 'contact'];
+var menuList = ['intro', 'about', 'contact', 'calculator'];
 var menuMain = document.getElementById("main-menu");
 var contentMain = document.getElementById("main-content");
 var bodyMain = document.getElementById("mainSuper");
