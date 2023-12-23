@@ -9,8 +9,9 @@ var bodyMain = document.getElementById("mainSuper");
 var a = "";
 var beautyMode = 0;
 
-// nti letak betul
+// nti letak betul2
 menuMain.style.display = "flex";
+// menuSide.style.display = "flex";
 
 LoadMenu(menuList);
 drawMenu(a);

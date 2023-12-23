@@ -63,8 +63,17 @@ img.profile-pic {
 #menu-top {
     display: flex;
 }
+
 #menu-side {
     display: none;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#menu-side > a {
+    width:100% !important;
+    display: flex !important;
 }
 
 .f-item-3 {
@@ -89,6 +98,7 @@ img.profile-pic {
     display: flex;
 }
 
+#menu-side > a,
 .navbar a {
     color: rgb(255, 255, 255);     
     padding: 14px 20px;
@@ -97,6 +107,7 @@ img.profile-pic {
   }
   
   /* Change color on hover */
+  #menu-side > a:hover,
   .navbar a:hover {
     background-color: #ddd;
     color: black;
@@ -113,7 +124,7 @@ img.profile-pic {
 }
 
 
-.a-right {
+#menu-top > .a-right {
     position: absolute;
     right: 0px;
 }
