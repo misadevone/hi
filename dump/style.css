@@ -11,14 +11,6 @@ F20070
     color:aliceblue;
 }
 
-h1 {
-    font-size: 4vh;
-}
-
-h2 {
-    font-size: 3.5vh;
-}
-
 body {
     padding: 10px;
     background-color: black;
@@ -116,7 +108,10 @@ img.profile-pic {
     right: 0px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) 
+    body, h2, span, p { font-size: 16px; }
+    h1 { font-size: 18px; }
+
     .f-item-1, .f-item-2, .f-item-3 {
         flex: 100%;
         padding: 5px;
