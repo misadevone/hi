@@ -1,7 +1,7 @@
 
 console.log("js berfungshen");
 
-var menuList = ['intro', 'about', 'contact', 'calculator','login', 'mega-togel'];
+var menuList = ['intro', 'about', 'contact', 'calculator','login', 'menu-switch'];
 var menuMain = document.getElementById("menu-top");
 var menuSide = document.getElementById("menu-side");
 var contentMain = document.getElementById("main-content");
@@ -21,7 +21,7 @@ function LoadMenu(item) {
 }
 
 function buildMenu(item, index) {
-    if(item == "mega-togel") {
+    if(item == "menu-switch") {
         a += "<a href='#"+item+"' class='a-right' onClick='"+'toggleLayout("'+item+'")'+"'>"+item+"</a>";
     } else {
         a += "<a href='#"+item+"' onClick='"+'loadContent("'+item+'")'+"'>"+item+"</a>";
