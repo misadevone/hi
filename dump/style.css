@@ -1,20 +1,42 @@
-/* F3FF4B
-F20070-PINK
-59EAFD-SKYBLU
-5B9EC8-MEDBLUE
-070F22-DARKBLUE*/
-
+.reference {
+    color: #F3FF4B;
+    color: #F20070;
+    color: #59EAFD;
+    color: #5B9EC8;
+    color: #070F22;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color:aliceblue;
+    font-family:monospace;
+    /* border-radius: 25px; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+h2 {
+    background-color: #5B9EC8;
+    margin-bottom: 1vh;
+    padding-left: 2vw;
+    width: 100%;
+    color: #070F22;
+}
+
+.f-item-2 {
+    /* background-color: #5B9EC8; */
 }
 
 body {
     padding: 10px;
-    background-color: black;
-    
+    background-color: white;
+    /* display: none; */
+    background: #070F22;
+    animation: animazzzzah 1s ;
+}
+
+@keyframes animazzzzah {
+    from {background-color: black;}
+    to {background-color: #070F22;}
 }
 
 .f-container {
@@ -22,14 +44,34 @@ body {
     flex-wrap: wrap;
 }
 
-.f-container.banner {
+.banner {
     height: 140px;
+    /* background-color: red; */
     /* background-image: url("coming-soon-4.jpg"); */
     background-size: cover;
     background-position: no-repeat;
     margin: -10px;
     justify-content: center;
     align-items: center;
+
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    border-color: #59EAFD;
+}
+
+.footer {
+    height: 140px;
+    /* background-color: red; */
+    /* background-image: url("coming-soon-4.jpg"); */
+    background-size: cover;
+    background-position: no-repeat;
+    /* margin: -10px; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    border-color: red;
 }
 
 img.profile-pic {
@@ -59,6 +101,7 @@ img.profile-pic {
     padding: 10px;
     margin: 0.2em;
 }
+
 
 #menu-top {
     display: flex;
@@ -98,6 +141,7 @@ img.profile-pic {
 .navbar {
     border: 1px solid black;
     display: flex;
+    max-height: 50px; /*this height is to make menu container height fixed when submenu appear*/ 
 }
 
 #menu-side > a,
@@ -107,6 +151,7 @@ img.profile-pic {
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
+
   }
   
   /* Change color on hover */
@@ -114,9 +159,12 @@ img.profile-pic {
   .navbar a:hover {
     border: 1px solid #59EAFD;
     /* background-color: #ddd; */
-    color: #59EAFD;
+    color: #F20070;
   }
 
+  strong {
+    color: #F20070;
+  }
 .nav-mobile {
     display: none;
 }
@@ -133,10 +181,54 @@ img.profile-pic {
     right: 0px;
 }
 
+/* submenu test, implementation not very good becaouse using flex */
+.menu-sub {
+    /* flex-basis: 100%; */
+    height: auto;
+    width: 100px;
+    /* margin-top: 40px;
+    margin-left:-80px; */
+    background-color: blue;
+    display: none;
+    z-index: 1;
+    /* width: 50%; */
+}
+
+.menu-sub > a {
+    display: block;
+    background-color: black;
+}
+
+a.menu-item-sub:hover {
+    /* align-self: flex-start; */
+    /* background-color: #59EAFD; */
+}
+
+.menu-item-sub:hover + div {
+    /* float: left; */
+    background-color: blue;
+    text-decoration: underline;
+    display: block;
+}
+
+.menu-item-sub + div:hover {
+    /* float: left; */
+    background-color: red;
+    text-decoration: underline;
+    display: block;
+}
+
+/* sub tst */
+
 @media screen and (max-width: 480px) {
 
     body {
-        padding-bottom:80px;
+        padding-bottom:8vh;
+    }
+
+    .banner, .footer {
+        height: 8vh;
+        
     }
 
     body, h2, span, p { font-size: 16px; }
