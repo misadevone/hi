@@ -69,6 +69,8 @@ img.profile-pic {
     flex-direction: row; 
     flex-wrap: wrap;
     width: 100%;
+    align-self: flex-start;
+
 }
 
 #menu-side > a {
