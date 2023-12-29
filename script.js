@@ -8,7 +8,16 @@ var bodyMain = document.getElementById("mainSuper");
 var a = "";
 var beautyMode = 0;
 
+const btnTglWidth = document.getElementById("btn-tgl-width");
+const wrapMain = document.getElementById("wrap-main");
 
+btnTglWidth.addEventListener("click", toggleWidth);
+
+
+function toggleWidth() {
+    alert('za');
+    wrapMain.classList.toggle("full-width");
+}
 
 LoadMenu(menuList);
 drawMenu(a);
