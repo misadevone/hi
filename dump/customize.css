@@ -1,4 +1,4 @@
-/* Changing value here is save kot XD */
+/* customize css is for u can change value, u will not break layout so bad. */
 .reference {
     color: #F3FF4B;
     color: #F20070;
@@ -43,6 +43,15 @@ body {
     border: 0px solid white;
 }
 
+.floating-container {
+    background-color: #070F22;
+}
+.floating-container.plop {
+    border: 1px solid #59EAFD;
+}
+button.float-menu-mobile-toggle {
+    border: 2px solid #59EAFD;
+}
 
 a:hover {
     color: #F20070;
@@ -75,10 +84,18 @@ a:hover {
 
 /* menu section end */
 
-
+input[type=button],
 button {
+    border: 1px solid white;
+    background-color: #070F22;
     padding: 5px;
-    color: black;
+    color: white;
+}
+
+input[type=button]:hover,
+button:hover {
+    color: #F20070;
+
 }
 
 .item.card {

@@ -1,7 +1,7 @@
 // matching different menu with different location omg
 // menu list
 const viewDir = "./dump/view/";
-const conf_menu = ['intro', 'contact','login',['Reference', 'external-w3schools.com','external-google.com','external-misadevone.github.io/bitkraf']];
+const conf_menu = ['intro', 'contact','login',['Reference', 'external-w3schools.com','external-web.dev', 'external-digitalocean.com','external-misadevone.github.io/bitkraf']];
 
 const targetLoc = document.querySelectorAll('[data-view-target]');
 const menuLoc = document.querySelectorAll('[data-build-menu]');
