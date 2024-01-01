@@ -82,6 +82,7 @@ function assembleMenu(type, item) {
 }
 
 async function loadContent(e){
+    targetLoc[0].innerHTML = "<div class='sophisticated-loading-bra'></div>";
     console.log("-view fetched-");
     let response = await fetch(viewDir+e+".html");
     let data = await response.text();
