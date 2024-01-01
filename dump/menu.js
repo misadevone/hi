@@ -1,7 +1,7 @@
 // matching different menu with different location omg
 // menu list
 const viewDir = "./dump/view/";
-const conf_menu = ['intro', 'contact','login', 'aksd',['Reference', 'external-w3schools.com','external-google.com','external-misadevone.github.io/bitkraf']];
+const conf_menu = ['intro', 'contact','login',['Reference', 'external-w3schools.com','external-google.com','external-misadevone.github.io/bitkraf']];
 
 const targetLoc = document.querySelectorAll('[data-view-target]');
 const menuLoc = document.querySelectorAll('[data-build-menu]');
@@ -82,9 +82,9 @@ function assembleMenu(type, item) {
 }
 
 async function loadContent(e){
+    console.log("-view fetched-");
     let response = await fetch(viewDir+e+".html");
     let data = await response.text();
-    console.log(data.status); 
     targetLoc[0].innerHTML = data;
 
     // var d = document.getElementById("content-"+e);
