@@ -1,6 +1,7 @@
 // matching different menu with different location omg
 // menu list
-const conf_menu = ['intro', 'contact','login', ['Reference', 'external-w3schools.com','external-google.com','tutorial']];
+const viewDir = "./dump/view/";
+const conf_menu = ['intro', 'contact','login', 'aksd',['Reference', 'external-w3schools.com','external-google.com','external-misadevone.github.io/bitkraf']];
 
 const targetLoc = document.querySelectorAll('[data-view-target]');
 const menuLoc = document.querySelectorAll('[data-build-menu]');
@@ -72,7 +73,7 @@ function assembleMenu(type, item) {
         a += "<a href='#"+item+"' onClick='"+'loadContent("'+item+'")'+"'>"+item+"</a>";
 
     } else if(type == "external") {
-        a += "<a href='https://www."+item+"' target='_blank'>"+item+"</a>";
+        a += "<a href='https://"+item+"' target='_blank'>"+item+"</a>";
 
     } else {
         a = "error ahahaha";
@@ -80,7 +81,12 @@ function assembleMenu(type, item) {
     return a;
 }
 
-function loadContent(e){
-    var d = document.getElementById("content-"+e);
-    targetLoc[0].innerHTML = d.innerHTML;
+async function loadContent(e){
+    let response = await fetch(viewDir+e+".html");
+    let data = await response.text();
+    console.log(data.status); 
+    targetLoc[0].innerHTML = data;
+
+    // var d = document.getElementById("content-"+e);
+    // targetLoc[0].innerHTML = d.innerHTML;
 }
