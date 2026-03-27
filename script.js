@@ -1,5 +1,5 @@
 
-console.log("js berfungshen");
+console.log("js berfangshen");
 
 var menuList = ['intro', 'about', 'contact', 'calculator'];
 var menuMain = document.getElementById("main-menu");
